@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Prospects Prioritaires - Nantes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0f0f1a;
+            --bg-secondary: #1a1a2e;
+            --bg-card: #16213e;
+            --accent: #e94560;
+            --accent-glow: rgba(233, 69, 96, 0.3);
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --success: #00d09c;
+            --warning: #ffc107;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            background-image:
+                radial-gradient(ellipse at 20% 20%, rgba(233, 69, 96, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(0, 208, 156, 0.08) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card));
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--accent), #ff6b8a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: var(--bg-primary);
+            padding: 1.5rem 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+
+        .filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .search-box::before {
+            content: "🔍";
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .filter-select {
+            padding: 1rem 1.5rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .toggle-btn {
+            padding: 1rem 1.5rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .toggle-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .prospects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .prospect-card {
+            background: linear-gradient(145deg, var(--bg-secondary), var(--bg-card));
+            border-radius: 16px;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .prospect-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--success));
+        }
+
+        .prospect-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent);
+        }
+
+        .prospect-card.priority::before {
+            background: var(--accent);
+            height: 4px;
+        }
+
+        .prospect-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .prospect-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+        .prospect-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-priority {
+            background: rgba(233, 69, 96, 0.2);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+
+        .badge-has-site {
+            background: rgba(0, 208, 156, 0.2);
+            color: var(--success);
+            border: 1px solid var(--success);
+        }
+
+        .prospect-category {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .prospect-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .info-row .icon {
+            flex-shrink: 0;
+            width: 20px;
+            text-align: center;
+        }
+
+        .info-row a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .info-row a:hover {
+            color: #ff6b8a;
+            text-decoration: underline;
+        }
+
+        .prospect-note {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background: rgba(233, 69, 96, 0.1);
+            border-radius: 10px;
+            border-left: 3px solid var(--accent);
+            font-size: 0.85rem;
+            color: var(--accent);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .no-results h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .stats {
+                gap: 1rem;
+            }
+
+            .stat-card {
+                padding: 1rem 1.5rem;
+            }
+
+            .prospects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Prospects Prioritaires</h1>
+            <p class="subtitle">Entreprises sans site web à Nantes - Opportunités de prospection</p>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-count">-</div>
+                    <div class="stat-label">Total Prospects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="priority-count">-</div>
+                    <div class="stat-label">Sans Site Web</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="categories-count">-</div>
+                    <div class="stat-label">Catégories</div>
+                </div>
+            </div>
+        </header>
+
+        <div class="filters">
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Rechercher un prospect...">
+            </div>
+            <select class="filter-select" id="category-filter">
+                <option value="">Toutes les catégories</option>
+            </select>
+            <button class="toggle-btn active" id="toggle-priority">
+                🎯 Sans site uniquement
+            </button>
+        </div>
+
+        <div class="prospects-grid" id="prospects-grid">
+            <!-- Cards will be inserted here -->
+        </div>
+
+        <div class="no-results" id="no-results" style="display: none;">
+            <h3>Aucun résultat</h3>
+            <p>Essayez de modifier vos filtres de recherche</p>
+        </div>
+    </div>
+
+    <script>
+        let allProspects = [];
+        let priorityProspects = [];
+        let showPriorityOnly = true;
+
+        async function loadData() {
+            try {
+                const [allRes, priorityRes] = await Promise.all([
+                    fetch('all_prospects.json'),
+                    fetch('prospects_sans_site.json')
+                ]);
+
+                allProspects = await allRes.json();
+                priorityProspects = await priorityRes.json();
+
+                updateStats();
+                populateCategories();
+                renderProspects();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('prospects-grid').innerHTML = `
+                    <div class="no-results" style="grid-column: 1 / -1;">
+                        <h3>⚠️ Erreur de chargement</h3>
+                        <p>Lancez un serveur local: python -m http.server 8000</p>
+                    </div>
+                `;
+            }
+        }
+
+        function updateStats() {
+            document.getElementById('total-count').textContent = allProspects.length;
+            document.getElementById('priority-count').textContent = priorityProspects.length;
+
+            const categories = new Set(allProspects.map(p => p.categorie));
+            document.getElementById('categories-count').textContent = categories.size;
+        }
+
+        function populateCategories() {
+            const categories = [...new Set(allProspects.map(p => p.categorie))].sort();
+            const select = document.getElementById('category-filter');
+
+            categories.forEach(cat => {
+                const option = document.createElement('option');
+                option.value = cat;
+                option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+                select.appendChild(option);
+            });
+        }
+
+        function renderProspects() {
+            const searchTerm = document.getElementById('search').value.toLowerCase();
+            const categoryFilter = document.getElementById('category-filter').value;
+
+            let prospects = showPriorityOnly ? priorityProspects : allProspects;
+
+            prospects = prospects.filter(p => {
+                const matchesSearch = !searchTerm ||
+                    p.nom?.toLowerCase().includes(searchTerm) ||
+                    p.adresse?.toLowerCase().includes(searchTerm) ||
+                    p.telephone?.includes(searchTerm);
+
+                const matchesCategory = !categoryFilter || p.categorie === categoryFilter;
+
+                return matchesSearch && matchesCategory;
+            });
+
+            const grid = document.getElementById('prospects-grid');
+            const noResults = document.getElementById('no-results');
+
+            if (prospects.length === 0) {
+                grid.innerHTML = '';
+                noResults.style.display = 'block';
+                return;
+            }
+
+            noResults.style.display = 'none';
+
+            grid.innerHTML = prospects.map(p => {
+                const isPriority = !p.a_un_site;
+                const mapsQuery = encodeURIComponent(`${p.nom || ''} ${p.adresse || ''}`);
+                const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`;
+                return `
+                    <div class="prospect-card ${isPriority ? 'priority' : ''}" onclick="window.open('${mapsUrl}', '_blank')" title="Ouvrir dans Google Maps">
+                        <div class="prospect-header">
+                            <h3 class="prospect-name">${escapeHtml(p.nom || 'N/A')}</h3>
+                            <span class="prospect-badge ${isPriority ? 'badge-priority' : 'badge-has-site'}">
+                                ${isPriority ? '🎯 Prioritaire' : '🌐 Avec site'}
+                            </span>
+                        </div>
+                        
+                        <div class="prospect-category">
+                            ${escapeHtml(p.categorie || 'Non catégorisé')}
+                        </div>
+                        
+                        <div class="prospect-info">
+                            ${p.adresse ? `
+                                <div class="info-row">
+                                    <span class="icon">📍</span>
+                                    <span>${escapeHtml(p.adresse)}</span>
+                                </div>
+                            ` : ''}
+                            
+                            ${p.telephone ? `
+                                <div class="info-row">
+                                    <span class="icon">📞</span>
+                                    <a href="tel:${p.telephone}">${escapeHtml(p.telephone)}</a>
+                                </div>
+                            ` : ''}
+                            
+                            ${p.site_web ? `
+                                <div class="info-row">
+                                    <span class="icon">🌐</span>
+                                    <a href="${p.site_web}" target="_blank">Voir le site</a>
+                                </div>
+                            ` : ''}
+                        </div>
+                        
+                        ${p.note ? `
+                            <div class="prospect-note">
+                                💡 ${escapeHtml(p.note)}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Event listeners
+        document.getElementById('search').addEventListener('input', renderProspects);
+        document.getElementById('category-filter').addEventListener('change', renderProspects);
+
+        document.getElementById('toggle-priority').addEventListener('click', function () {
+            showPriorityOnly = !showPriorityOnly;
+            this.classList.toggle('active', showPriorityOnly);
+            this.textContent = showPriorityOnly ? '🎯 Sans site uniquement' : '📋 Tous les prospects';
+            renderProspects();
+        });
+
+        // Load data on page load
+        loadData();
+    </script>
+</body>
+
+</html>

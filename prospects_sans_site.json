@@ -1,0 +1,128 @@
+[
+  {
+    "id": 46,
+    "nom": "ArnO Boulangerie",
+    "categorie": "boulangerie",
+    "adresse": "\n16 Rue de Verdun, 44000 Nantes",
+    "telephone": "\n02 40 74 83 65",
+    "note": "Pas de site web - Prospect prioritaire!",
+    "date_ajout": "2026-01-19 23:08:46"
+  },
+  {
+    "id": 48,
+    "nom": "marguerite Boulangerie du coin",
+    "categorie": "boulangerie",
+    "adresse": "\n8 Rue Guépin, 44000 Nantes",
+    "telephone": "\n02 51 83 58 48",
+    "note": "Pas de site web - Prospect prioritaire!",
+    "date_ajout": "2026-01-19 23:08:50"
+  },
+  {
+    "id": 68,
+    "nom": "Anaëlle FORCE - Coach sportif Nantes",
+    "categorie": "coach sportif",
+    "adresse": "\nBd de Berlin, 44000 Nantes",
+    "telephone": "\n07 77 37 12 27",
+    "note": "Pas de site web - Prospect prioritaire!",
+    "date_ajout": "2026-01-19 23:11:05"
+  },
+  {
+    "id": 73,
+    "nom": "coach sportif Nantes",
+    "categorie": "coach sportif",
+    "adresse": "\n65 Rue de Bel air, 44000 Nantes",
+    "telephone": "\n06 28 69 27 41",
+    "note": "Pas de site web - Prospect prioritaire!",
+    "date_ajout": "2026-01-19 23:11:14"
+  },
+  {
+    "id": 1,
+    "nom": "Les Coiffeurs Nantes",
+    "categorie": "coiffeur",
+    "adresse": "\n6 Pl. de la Bourse, 44000 Nantes",
+    "telephone": "\n02 40 48 45 09",
+    "note": "Pas de site web - Prospect prioritaire!",
+    "date_ajout": "2026-01-19 23:04:19"
+  },
+  {
+    "id": 60,
+    "nom": "Fleuriste Nantes - Vert la Couleur",
+    "categorie": "fleuriste",
+    "adresse": "\n82 Bd Victor Hugo, 44200 Nantes",
+    "telephone": "\n02 51 82 08 49",
+    "note": "Pas de site web - Prospect prioritaire!",
+    "date_ajout": "2026-01-19 23:09:56"
+  },
+  {
+    "id": 99,
+    "nom": "Félix Amadeus Charpente et menuiserie",
+    "categorie": "menuisier",
+    "adresse": "\n15 Rue la Tour d'Auvergne, 44200 Nantes",
+    "telephone": null,
+    "note": "Pas de site web - Prospect prioritaire!",
+    "date_ajout": "2026-01-19 23:14:12"
+  },
+  {
+    "id": 15,
+    "nom": "Eco services",
+    "categorie": "plombier",
+    "adresse": "\n91 Rte de la Chapelle-sur-Erdre, 44300 Nantes",
+    "telephone": "\n06 66 57 86 32",
+    "note": "Pas de site web - Prospect prioritaire!",
+    "date_ajout": "2026-01-19 23:05:28"
+  },
+  {
+    "id": 16,
+    "nom": "Plombier DMS",
+    "categorie": "plombier",
+    "adresse": "\n1 Quai Henri Barbusse, 44000 Nantes",
+    "telephone": "\n06 68 75 85 49",
+    "note": "Pas de site web - Prospect prioritaire!",
+    "date_ajout": "2026-01-19 23:05:30"
+  },
+  {
+    "id": 105,
+    "nom": "Le Cellier",
+    "categorie": "traiteur",
+    "adresse": "\n66 Rue Maréchal Joffre, 44000 Nantes",
+    "telephone": "\n09 54 86 52 32",
+    "note": "Pas de site web - Prospect prioritaire!",
+    "date_ajout": "2026-01-19 23:14:40"
+  },
+  {
+    "id": 110,
+    "nom": "Soleá Cuisine",
+    "categorie": "traiteur",
+    "adresse": "\nBd des Américains, 44300 Nantes",
+    "telephone": "\n07 49 53 50 87",
+    "note": "Pas de site web - Prospect prioritaire!",
+    "date_ajout": "2026-01-19 23:15:12"
+  },
+  {
+    "id": 30,
+    "nom": "AP Electricité",
+    "categorie": "électricien",
+    "adresse": "\n9 Bd de Launay, 44100 Nantes",
+    "telephone": "\n06 75 65 07 91",
+    "note": "Pas de site web - Prospect prioritaire!",
+    "date_ajout": "2026-01-19 23:06:43"
+  },
+  {
+    "id": 28,
+    "nom": "Electricite Générale et Protection Incendie E.G.P.I Julien GUILLAUME",
+    "categorie": "électricien",
+    "adresse": "\n144 Rue Paul Bellamy CS 12414, 44000 Nantes",
+    "telephone": "\n07 87 14 48 26",
+    "note": "Pas de site web - Prospect prioritaire!",
+    "date_ajout": "2026-01-19 23:06:39"
+  },
+  {
+    "id": 34,
+    "nom": "GC Elec 44",
+    "categorie": "électricien",
+    "adresse": "\n6 Rue Coquebert de Neuville, 44000 Nantes",
+    "telephone": "\n06 65 18 00 61",
+    "note": "Pas de site web - Prospect prioritaire!",
+    "date_ajout": "2026-01-19 23:07:16"
+  }
+]

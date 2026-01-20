@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon de Coiffure - Votre Style, Notre Passion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo">✨ Salon Demo</a>
+            <button class="nav-toggle" id="nav-toggle"><span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#equipe">Équipe</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="accueil">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tag">💇‍♀️ Bienvenue</span>
+            <h1 class="hero-title" id="hero-title">Salon Demo</h1>
+            <p class="hero-subtitle" id="hero-subtitle">L'art de sublimer votre beauté naturelle</p>
+            <div class="hero-buttons">
+                <a href="tel:+33240000000" class="btn btn-primary" id="hero-phone">📞 Prendre RDV</a>
+                <a href="#services" class="btn btn-secondary">Nos Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Ce que nous offrons</span>
+                <h2 class="section-title">Nos Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">✂️</div>
+                    <h3>Coupe Femme</h3>
+                    <p>Coupe personnalisée selon votre visage</p>
+                    <span class="service-price">À partir de 35€</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💇</div>
+                    <h3>Coupe Homme</h3>
+                    <p>Coupe moderne et tendance</p>
+                    <span class="service-price">À partir de 20€</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Coloration</h3>
+                    <p>Couleurs naturelles ou fantaisie</p>
+                    <span class="service-price">À partir de 45€</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💆</div>
+                    <h3>Soins Capillaires</h3>
+                    <p>Masques et traitements réparateurs</p>
+                    <span class="service-price">À partir de 25€</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💍</div>
+                    <h3>Coiffure Mariage</h3>
+                    <p>Chignons et coiffures événementielles</p>
+                    <span class="service-price">Sur devis</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧔</div>
+                    <h3>Barbe & Rasage</h3>
+                    <p>Taille et entretien de barbe</p>
+                    <span class="service-price">À partir de 15€</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section galerie" id="galerie">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre travail</span>
+                <h2 class="section-title">Galerie</h2>
+            </div>
+            <div class="galerie-grid">
+                <div class="galerie-item">📸</div>
+                <div class="galerie-item">📸</div>
+                <div class="galerie-item">📸</div>
+                <div class="galerie-item">📸</div>
+                <div class="galerie-item">📸</div>
+                <div class="galerie-item">📸</div>
+            </div>
+            <p style="text-align:center; color: var(--text-secondary); margin-top: 2rem;">
+                <em>Ajoutez vos photos via l'interface admin</em>
+            </p>
+        </div>
+    </section>
+
+    <section class="section equipe" id="equipe">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre talent</span>
+                <h2 class="section-title">L'Équipe</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo">👩‍🦰</div>
+                    <h3>Sophie Martin</h3>
+                    <p>Fondatrice & Coloriste</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo">👨‍🦱</div>
+                    <h3>Lucas Dupont</h3>
+                    <p>Coiffeur Styliste</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo">👩</div>
+                    <h3>Emma Bernard</h3>
+                    <p>Spécialiste Mariage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section hours" id="horaires">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Quand venir</span>
+                <h2 class="section-title">Horaires d'Ouverture</h2>
+            </div>
+            <div class="hours-table">
+                <div class="hours-row"><span>Lundi</span><span>Fermé</span></div>
+                <div class="hours-row"><span>Mardi - Vendredi</span><span>9h00 - 19h00</span></div>
+                <div class="hours-row"><span>Samedi</span><span>9h00 - 18h00</span></div>
+                <div class="hours-row"><span>Dimanche</span><span>Fermé</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nous trouver</span>
+                <h2 class="section-title">Contact</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p id="contact-address">123 Rue de la Beauté<br>44000 Nantes</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <h4>Téléphone</h4><a href="tel:+33240000000" id="contact-phone">02 40 00 00 00</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💌</span>
+                        <div>
+                            <h4>Email</h4><a href="mailto:contact@salon-demo.fr"
+                                id="contact-email">contact@salon-demo.fr</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="map-placeholder">
+                        <span>🗺️</span>
+                        <a href="#" class="btn btn-secondary btn-small" id="map-link" target="_blank">Ouvrir dans
+                            Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 id="footer-name">✨ Salon Demo</h3>
+                    <p>Votre beauté, notre passion</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">📷</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span id="footer-copyright">Salon Demo</span>. Tous droits réservés.</p>
+                <a href="admin.html" class="admin-link">⚙️ Admin</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

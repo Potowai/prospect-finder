@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boulangerie Demo - Pain Artisanal Traditionnel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">🥖 Boulangerie Demo</a>
+            <button class="nav-toggle"><span></span><span></span><span></span></button>
+            <ul class="nav-menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#produits">Nos Produits</a></li>
+                <li><a href="#specialites">Spécialités</a></li>
+                <li><a href="#horaires">Horaires</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <span class="hero-tag">🌾 Artisan Boulanger</span>
+            <h1 class="hero-title">Boulangerie Demo</h1>
+            <p class="hero-subtitle">Le goût authentique du pain traditionnel depuis 1985</p>
+            <div class="hero-buttons">
+                <a href="#produits" class="btn btn-primary">🥐 Nos Produits</a>
+                <a href="assets/menu.pdf" class="btn btn-secondary" id="menu-btn" target="_blank"
+                    onclick="return openMenu()">📄 Carte des Pains</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section produits" id="produits">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Fraîcheur du jour</span>
+                <h2 class="section-title">Nos Produits</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">🥖</div>
+                    <h3>Baguette Tradition</h3>
+                    <p>Farine T65, fabrication artisanale</p>
+                    <span class="product-price">1,20€</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🍞</div>
+                    <h3>Pain de Campagne</h3>
+                    <p>Levain naturel, cuisson bois</p>
+                    <span class="product-price">3,50€</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🥐</div>
+                    <h3>Croissant Pur Beurre</h3>
+                    <p>Beurre AOP Charentes-Poitou</p>
+                    <span class="product-price">1,40€</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🍩</div>
+                    <h3>Pain au Chocolat</h3>
+                    <p>Chocolat noir 70% cacao</p>
+                    <span class="product-price">1,50€</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🥧</div>
+                    <h3>Tartes & Pâtisseries</h3>
+                    <p>Préparées chaque matin</p>
+                    <span class="product-price">Dès 3,00€</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🥪</div>
+                    <h3>Sandwichs Frais</h3>
+                    <p>Préparés minute à la demande</p>
+                    <span class="product-price">Dès 4,50€</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section specialites" id="specialites">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre savoir-faire</span>
+                <h2 class="section-title">Nos Spécialités</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🌿</span>
+                    <h3>100% Naturel</h3>
+                    <p>Sans additifs ni conservateurs</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🌾</span>
+                    <h3>Farines Locales</h3>
+                    <p>Moulins de la région</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">👨‍🍳</span>
+                    <h3>Fait Maison</h3>
+                    <p>Tout est préparé sur place</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">⏰</span>
+                    <h3>Frais du Jour</h3>
+                    <p>Cuisson dès 4h du matin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section hours" id="horaires">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Quand venir</span>
+                <h2 class="section-title">Horaires d'Ouverture</h2>
+            </div>
+            <div class="hours-table">
+                <div class="hours-row"><span>Lundi</span><span>Fermé</span></div>
+                <div class="hours-row"><span>Mardi - Samedi</span><span>6h30 - 19h30</span></div>
+                <div class="hours-row"><span>Dimanche</span><span>7h00 - 13h00</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nous trouver</span>
+                <h2 class="section-title">Contact</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p id="contact-address">123 Rue du Bon Pain<br>44000 Nantes</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <h4>Téléphone</h4><a href="tel:+33240000000" id="contact-phone">02 40 00 00 00</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="map-placeholder">
+                        <span>🗺️</span>
+                        <a href="#" class="btn btn-secondary btn-small" id="map-link" target="_blank">Ouvrir dans
+                            Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>🥖 Boulangerie Demo</h3>
+                    <p>Artisan boulanger depuis 1985</p>
+                </div>
+                <div class="footer-social"><a href="#" class="social-link">📘</a><a href="#" class="social-link">📷</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Boulangerie Demo. Tous droits réservés.</p>
+                <a href="admin.html" class="admin-link">⚙️ Admin</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

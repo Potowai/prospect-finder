@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Restaurant Demo - Votre Restaurant à Nantes</title>
+    <meta name="description" id="meta-description"
+        content="Découvrez notre restaurant et notre carte. Cuisine traditionnelle française à Nantes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo">Restaurant Demo</a>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#menu">Notre Carte</a></li>
+                <li><a href="#horaires">Horaires</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" id="hero-title">Restaurant Demo</h1>
+            <p class="hero-subtitle" id="hero-subtitle">Cuisine traditionnelle française depuis 1990</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Découvrir la Carte</a>
+                <a href="tel:+33240000000" class="btn btn-secondary" id="hero-phone">
+                    <span>📞</span> Réserver
+                </a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre Histoire</span>
+                <h2 class="section-title">À Propos</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-image-placeholder" id="about-image">
+                        🍽️
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p id="about-description">
+                        Bienvenue dans notre établissement, où la passion de la cuisine française
+                        se transmet depuis trois générations. Notre chef sélectionne chaque jour
+                        les meilleurs produits locaux pour vous offrir une expérience culinaire
+                        authentique et savoureuse.
+                    </p>
+                    <p>
+                        Dans un cadre chaleureux et convivial, venez découvrir nos plats
+                        traditionnels revisités avec une touche de modernité.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <span class="feature-icon">🥖</span>
+                            <span>Produits frais</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">👨‍🍳</span>
+                            <span>Fait maison</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🌿</span>
+                            <span>Local & Bio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section menu-section" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nos Spécialités</span>
+                <h2 class="section-title">Notre Carte</h2>
+            </div>
+
+            <!-- Menu Options: PDF or Menu Items -->
+            <div class="menu-options" id="menu-options">
+                <!-- Option A: PDF Button -->
+                <div class="menu-pdf-option" id="menu-pdf-section">
+                    <p class="menu-intro">Découvrez notre carte complète</p>
+                    <a href="assets/menu.pdf" class="btn btn-primary btn-large" id="menu-pdf-btn" target="_blank"
+                        onclick="return checkPdfLink(this)">
+                        <span>📄</span> Voir le Menu (PDF)
+                    </a>
+                    <p class="menu-demo-note" style="margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">
+                        <em>💡 Démo: Uploadez votre PDF via l'<a href="admin.html">interface admin</a></em>
+                    </p>
+                </div>
+
+                <!-- Option B: Menu Grid (hidden by default, toggle via config) -->
+                <div class="menu-grid" id="menu-grid" style="display: none;">
+                    <!-- Menu items will be inserted here by JS -->
+                </div>
+            </div>
+
+            <!-- Menu Categories Tabs (for menu page option) -->
+            <div class="menu-tabs" id="menu-tabs" style="display: none;">
+                <button class="menu-tab active" data-category="entrees">Entrées</button>
+                <button class="menu-tab" data-category="plats">Plats</button>
+                <button class="menu-tab" data-category="desserts">Desserts</button>
+                <button class="menu-tab" data-category="boissons">Boissons</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours Section -->
+    <section class="section hours" id="horaires">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Quand venir</span>
+                <h2 class="section-title">Nos Horaires</h2>
+            </div>
+            <div class="hours-grid">
+                <div class="hours-card">
+                    <h3>🌅 Déjeuner</h3>
+                    <div class="hours-list" id="hours-lunch">
+                        <div class="hours-row">
+                            <span>Lundi - Vendredi</span>
+                            <span>12h00 - 14h30</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>Samedi - Dimanche</span>
+                            <span>12h00 - 15h00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hours-card">
+                    <h3>🌙 Dîner</h3>
+                    <div class="hours-list" id="hours-dinner">
+                        <div class="hours-row">
+                            <span>Mardi - Samedi</span>
+                            <span>19h00 - 22h30</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>Dimanche - Lundi</span>
+                            <span>Fermé</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nous trouver</span>
+                <h2 class="section-title">Contact</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p id="contact-address">123 Rue de la Gastronomie<br>44000 Nantes</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <a href="tel:+33240000000" id="contact-phone">02 40 00 00 00</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:contact@restaurant-demo.fr"
+                                id="contact-email">contact@restaurant-demo.fr</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map" id="contact-map">
+                    <div class="map-placeholder">
+                        <span>🗺️</span>
+                        <p>Carte Google Maps</p>
+                        <a href="#" class="btn btn-secondary btn-small" id="map-link" target="_blank">
+                            Ouvrir dans Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 id="footer-name">Restaurant Demo</h3>
+                    <p>Cuisine française traditionnelle</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" id="social-facebook" title="Facebook">📘</a>
+                    <a href="#" class="social-link" id="social-instagram" title="Instagram">📷</a>
+                    <a href="#" class="social-link" id="social-tripadvisor" title="TripAdvisor">🍴</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> <span id="footer-copyright">Restaurant Demo</span>. Tous
+                    droits réservés.</p>
+                <a href="admin.html" class="admin-link">⚙️ Admin</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

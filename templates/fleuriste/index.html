@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleuriste Demo - Créations Florales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">🌸 Fleuriste Demo</a>
+            <button class="nav-toggle"><span></span><span></span><span></span></button>
+            <ul class="nav-menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#creations">Créations</a></li>
+                <li><a href="#occasions">Occasions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <span class="hero-tag">🌺 Artisan Fleuriste</span>
+            <h1 class="hero-title">Fleuriste Demo</h1>
+            <p class="hero-subtitle">L'art floral au service de vos émotions</p>
+            <div class="hero-buttons">
+                <a href="tel:+33240000000" class="btn btn-primary" id="hero-phone">📞 Commander</a>
+                <a href="#creations" class="btn btn-secondary">Nos Créations</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section creations" id="creations">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Notre savoir-faire</span>
+                <h2 class="section-title">Nos Créations</h2>
+            </div>
+            <div class="creations-grid">
+                <div class="creation-card">
+                    <div class="creation-icon">💐</div>
+                    <h3>Bouquets</h3>
+                    <p>Compositions sur mesure pour toutes les occasions</p>
+                    <span class="creation-price">Dès 25€</span>
+                </div>
+                <div class="creation-card">
+                    <div class="creation-icon">🌹</div>
+                    <h3>Roses</h3>
+                    <p>Roses fraîches de producteurs locaux</p>
+                    <span class="creation-price">Dès 3€/pièce</span>
+                </div>
+                <div class="creation-card">
+                    <div class="creation-icon">🌿</div>
+                    <h3>Plantes</h3>
+                    <p>Plantes d'intérieur et d'extérieur</p>
+                    <span class="creation-price">Dès 15€</span>
+                </div>
+                <div class="creation-card">
+                    <div class="creation-icon">🎀</div>
+                    <h3>Compositions</h3>
+                    <p>Arrangements floraux artistiques</p>
+                    <span class="creation-price">Dès 35€</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section occasions" id="occasions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pour chaque moment</span>
+                <h2 class="section-title">Vos Occasions</h2>
+            </div>
+            <div class="occasions-grid">
+                <div class="occasion-card">
+                    <span class="occasion-icon">💒</span>
+                    <h3>Mariages</h3>
+                    <p>Décoration florale complète</p>
+                </div>
+                <div class="occasion-card">
+                    <span class="occasion-icon">🎂</span>
+                    <h3>Anniversaires</h3>
+                    <p>Bouquets festifs</p>
+                </div>
+                <div class="occasion-card">
+                    <span class="occasion-icon">💝</span>
+                    <h3>Saint-Valentin</h3>
+                    <p>Roses et compositions romantiques</p>
+                </div>
+                <div class="occasion-card">
+                    <span class="occasion-icon">🕊️</span>
+                    <h3>Deuil</h3>
+                    <p>Compositions respectueuses</p>
+                </div>
+                <div class="occasion-card">
+                    <span class="occasion-icon">🏢</span>
+                    <h3>Entreprises</h3>
+                    <p>Abonnements et événements</p>
+                </div>
+                <div class="occasion-card">
+                    <span class="occasion-icon">🎁</span>
+                    <h3>Cadeaux</h3>
+                    <p>Livraison express</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section hours" id="horaires">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nous rendre visite</span>
+                <h2 class="section-title">Horaires</h2>
+            </div>
+            <div class="hours-table">
+                <div class="hours-row"><span>Lundi</span><span>14h00 - 19h00</span></div>
+                <div class="hours-row"><span>Mardi - Samedi</span><span>9h00 - 19h00</span></div>
+                <div class="hours-row"><span>Dimanche</span><span>9h00 - 13h00</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Où nous trouver</span>
+                <h2 class="section-title">Contact</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h4>Boutique</h4>
+                            <p id="contact-address">123 Rue des Fleurs<br>44000 Nantes</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <h4>Téléphone</h4><a href="tel:+33240000000" id="contact-phone">02 40 00 00 00</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🚚</span>
+                        <div>
+                            <h4>Livraison</h4>
+                            <p>Nantes et périphérie</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <div class="map-placeholder">
+                        <span>🗺️</span>
+                        <a href="#" class="btn btn-secondary btn-small" id="map-link" target="_blank">Nous trouver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>🌸 Fleuriste Demo</h3>
+                    <p>L'art floral au service de vos émotions</p>
+                </div>
+                <div class="footer-social"><a href="#" class="social-link">📘</a><a href="#" class="social-link">📷</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fleuriste Demo. Tous droits réservés.</p>
+                <a href="admin.html" class="admin-link">⚙️ Admin</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
