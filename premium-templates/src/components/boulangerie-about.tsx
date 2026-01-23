@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { Wheat } from "lucide-react";
 
 export const BoulangerieAbout = () => {
@@ -38,9 +39,12 @@ export const BoulangerieAbout = () => {
                             d'une agriculture française respectueuse de l'environnement et de la biodiversité.
                         </p>
 
-                        <button className="border border-white/30 px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-[var(--color-boulangerie-secondary)] transition-colors">
+                        <Link
+                            href="/arno-boulangerie/histoire"
+                            className="border border-white/30 px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-[var(--color-boulangerie-secondary)] transition-colors inline-block"
+                        >
                             En savoir plus
-                        </button>
+                        </Link>
                     </motion.div>
 
                 </div>

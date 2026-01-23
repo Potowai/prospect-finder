@@ -19,7 +19,8 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "simplex-noise": "^4.0.3",
-    "tailwind-merge": "^3.4.0"
+    "tailwind-merge": "^3.4.0",
+    "lenis": "^1.1.18"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

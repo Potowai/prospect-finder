@@ -5,28 +5,28 @@ import Image from "next/image";
 
 const galleryImages = [
     {
-        src: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?q=80&w=2000&auto=format&fit=crop",
-        alt: "Étalage de pains",
+        src: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=2626&auto=format&fit=crop", // Baker putting bread in oven
+        alt: "Au fournil",
         className: "md:col-span-2 md:row-span-2"
     },
     {
-        src: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2000&auto=format&fit=crop",
-        alt: "Mains du boulanger",
+        src: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2072&auto=format&fit=crop", // Sourdough hands
+        alt: "Le levain naturel",
         className: "md:col-span-1 md:row-span-1"
     },
     {
-        src: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=2000&auto=format&fit=crop",
-        alt: "Viennoiseries",
+        src: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=2000&auto=format&fit=crop", // Pastries/Burger
+        alt: "Pause déjeuner",
         className: "md:col-span-1 md:row-span-1"
     },
     {
-        src: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=2000&auto=format&fit=crop", // Burger bun or sandwich
-        alt: "Déjeuner",
+        src: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=2070&auto=format&fit=crop", // Croissants
+        alt: "Viennoiseries pur beurre",
         className: "md:col-span-1 md:row-span-1"
     },
     {
-        src: "https://images.unsplash.com/photo-1623341214825-9f4f963727da?q=80&w=2000&auto=format&fit=crop", // Brioche
-        alt: "Brioche dorée",
+        src: "https://images.unsplash.com/photo-1623341214825-9f4f963727da?q=80&w=2070&auto=format&fit=crop", // Brioche
+        alt: "Nos brioches",
         className: "md:col-span-1 md:row-span-1"
     }
 ];

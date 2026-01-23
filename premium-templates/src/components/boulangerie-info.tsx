@@ -2,7 +2,19 @@
 
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
 
-export const BoulangerieInfo = () => {
+interface BoulangerieInfoProps {
+    name?: string;
+    address?: string;
+    phone?: string;
+    email?: string;
+}
+
+export const BoulangerieInfo = ({
+    name = "La Boulangerie",
+    address = "42 Rue du Four, 75006 Paris, France",
+    phone = "+33 1 43 26 58 99",
+    email = "bonjour@lartisan-boulanger.fr"
+}: BoulangerieInfoProps) => {
     return (
         <footer className="bg-[var(--color-boulangerie-secondary)] text-white/80 py-16 font-sans">
             <div className="container px-4 mx-auto">
@@ -10,22 +22,28 @@ export const BoulangerieInfo = () => {
 
                     {/* Brand & Address */}
                     <div className="space-y-6">
-                        <h3 className="text-3xl font-serif font-bold text-white mb-4">La Boulangerie</h3>
+                        <h3 className="text-3xl font-serif font-bold text-white mb-4">{name}</h3>
                         <div className="flex items-start gap-4">
                             <MapPin className="text-[var(--color-boulangerie-primary)] mt-1" />
                             <p>
-                                42 Rue du Four,<br />
-                                75006 Paris, France
+                                {address.split(',').map((part, i) => (
+                                    <span key={i}>
+                                        {part.trim()}
+                                        {i < address.split(',').length - 1 && <br />}
+                                    </span>
+                                ))}
                             </p>
                         </div>
                         <div className="flex items-center gap-4">
                             <Phone className="text-[var(--color-boulangerie-primary)]" />
-                            <p>+33 1 43 26 58 99</p>
+                            <p>{phone}</p>
                         </div>
-                        <div className="flex items-center gap-4">
-                            <Mail className="text-[var(--color-boulangerie-primary)]" />
-                            <p>bonjour@lartisan-boulanger.fr</p>
-                        </div>
+                        {email && (
+                            <div className="flex items-center gap-4">
+                                <Mail className="text-[var(--color-boulangerie-primary)]" />
+                                <p>{email}</p>
+                            </div>
+                        )}
                     </div>
 
                     {/* Hours */}
@@ -68,7 +86,7 @@ export const BoulangerieInfo = () => {
                 </div>
 
                 <div className="mt-16 pt-8 border-t border-white/10 text-center text-sm text-white/40">
-                    © 2024 La Boulangerie. Fait avec amour et farine.
+                    © 2024 {name}. Fait avec amour et farine.
                 </div>
             </div>
         </footer>
