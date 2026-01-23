@@ -34,5 +34,6 @@
   },
   "workspaces": [
     "."
-  ]
+  ],
+  "packageManager": "bun@1.3.6"
 }
